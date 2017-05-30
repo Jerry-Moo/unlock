@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="ie ie6 lte9 lte8 lte7" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html class="ie ie7 lte9 lte8 lte7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 lte9 lte8" lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9" lang="en-US"> 
+<![endif]-->
+<!--[if gt IE 9]>  <html lang="en-US"> <![endif]-->
+<!--[if !IE]><!--> 
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<title>Unlock Your iPhone</title>
+        <!--bootstrap-->
+        <link rel="stylesheet" href="/static/jslib/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/static/jslib/bootstrap-responsive.min.css" type="text/css">
+        <link rel="stylesheet" href="/static/jslib/core.css" type="text/css">
+        <link rel="stylesheet" href="/static/jslib/cyberchimps-responsive.min.css" >
+        <link rel="stylesheet" href="/static/jslib/elements.css" type="text/css">
+        <link rel="stylesheet" href="/static/jslib/style.css" type="text/css">
+        <link rel="stylesheet" href="/static/verify/validationEngine.jquery.css" type="text/css"/>
+
+        <script type='text/javascript' src='/static/jslib/jquery.js'></script>
+        <script type='text/javascript' src='/static/jslib/jquery.slimbox.js'></script>
+        <script type='text/javascript' src='/static/jslib/query.jcarousel.min.js'></script>
+        <script type='text/javascript' src='/static/jslib/custom.js'></script>
+        <script type='text/javascript' src='/static/jslib/jquery.mobile.custom.min.js'></script>
+        <script type='text/javascript' src='/static/jslib/wipe-call.js'></script>
+        <script type='text/javascript' src='/static/jslib/elements.js'></script>
+        <script type='text/javascript' src='/static/verify/jquery.validationEngine-en.js'></script>
+        <script type='text/javascript' src='/static/verify/jquery.validationEngine.js'></script>
+
+	<style type="text/css">
+            body.custom-background { background-color: #f7f7f7; };
+            .recentcomments a{display:inline !important;
+                padding:0 !important;margin:0 !important;};
+            body {
+                font-size: 12px;     
+                font-family: Arial, Helvetica, sans-serif;     
+                font-weight: normal;     
+            }
+            .container {
+                max-width: 1020px;
+            }
+            #globalheader {
+                height:36px;
+                margin-top:30px;
+                margin-bottom:38px;
+                font-size:0px;
+                background: url('/static/img/tail.jpg') right;
+            }
+            .nav-btn {
+                height:36px;
+                width:117px;
+                cursor: pointer;
+                display: inline-block;
+            }
+            #nav-home { width:116px;background: url('/static/img/home.jpg'); }
+            #nav-home:hover {background: url('/static/img/home2.jpg');}
+            #nav-adv { background: url('/static/img/advantage.jpg'); }
+            #nav-adv:hover {background: url('/static/img/advantage2.jpg');}
+            #nav-unp{ background: url('/static/img/unlock price.jpg'); }
+            #nav-unp:hover {background: url('/static/img/unlock price2.jpg');}
+            #nav-chko{ background: url('/static/img/check orders.jpg'); }
+            #nav-chko:hover {background: url('/static/img/check orders2.jpg');}
+            #nav-faq{ background: url('/static/img/FAQ.jpg'); }
+            #nav-faq:hover {background: url('/static/img/FAQ2.jpg');}
+            #nav-cont{ background: url('/static/img/contact us.jpg'); }
+            #nav-cont:hover {background: url('/static/img/contact us2.jpg');}
+            tr {
+                line-height:50px;
+            }
+        </style>
+<script type='text/javascript'>
+function calc () {
+
+{% for t in tp %}
+    if( jQuery('#mmtype').val() == '{{ t.phone_type }}') {
+        jQuery('#mmcost').html('{{ t.price }}');
+        jQuery('#mmtime').html('{{ t.time_cost }}');
+        jQuery('#mmdevice').html('{{ t.support_device }}');
+    }
+{% endfor %}
+
+}
+    jQuery(document).ready(function(){
+        jQuery("#tobeverify").validationEngine();
+    });
+</script>
+        <script type="text/javascript"> _shcp = []; _shcp.push({widget_id : 585134, widget : "Chat", side : "right", position : "center", template : "blue", title : "Chat with admin" }); (function() { var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true; hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://widget.siteheart.com/apps/js/sh.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hcc, s.nextSibling); })(); </script>
+
+</head>
+
+<body class="home blog custom-background">
+
+<div class="container">
+    <div id="wrapper" class="container-fluid">	
+        <nav id="globalheader">
+            <a href="/"><span id="nav-home" class='nav-btn'></span></a>
+            <a href="/advantage"><span id="nav-adv" class='nav-btn'></span></a>
+            <a href="/unlock"><span id="nav-unp" class='nav-btn'></span></a>
+            <a href="/check"><span id="nav-chko" class='nav-btn'></span></a>
+            <a href="/faq"><span id="nav-faq" class='nav-btn'></span></a>
+            <a onclick="jQuery('#sh_button').click()"><span id="nav-cont" class='nav-btn'></span></a>
+
+        </nav>
+
+<!-- cont -->
+<div id="container" class="row-fluid" style="margin-top:80px;margin-bottom:100px;">
+<div id="content" class=" span12">
+
+
+
+<form id='tobeverify' method="post" action="ticket" name="create">
+<input type="hidden" name="picname" value="{{ tp[0].pic_name }}">
+<div id="widget-boxes-container" class="row-fluid">
+<div class="boxes">
+<div id="box1" class="box span4" style="width:auto;height:auto;">
+    <table border="0" bordercolor="#808080" style="border-collapse: collapse">
+    <tbody>
+    <tr>
+          <td bgcolor="#E9E9E9" align="left">Your IMEI:</td>
+          <td bgcolor="#E9E9E9" align="center" width="300"><input type="text" class="validate[required,custom[integer],minSize[15],maxSize[15]]" name="imei"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#C0C0C0" align="left">PayPal e-mail:</td>
+        <td bgcolor="#C0C0C0" align="center"><input type="text" class="validate[required,custom[email]]" name="email" value=""></td>
+    </tr>
+    <tr>
+          <td bgcolor="#E9E9E9" align="left">Phone type:</td>
+          <td bgcolor="#E9E9E9" align="center">
+            <select id='mmtype' name="mmtype" onChange='calc()'>
+            {% for t in tp %}
+            <option value="{{ t.phone_type }}">{{ t.phone_type }}</option>
+            {% endfor %}
+          </td>
+     </tr>
+     <tr>
+          <td bgcolor="#C0C0C0" align="left">Supported devices:</td>
+          <td id='mmdevice' bgcolor="#C0C0C0" align="center">{{ tp[0].support_device }}</td>
+     </tr>
+    <tr>
+        <td bgcolor="#E9E9E9" align="left">Time cost:</td>
+        <td id='mmtime' bgcolor="#E9E9E9" align="center">{{ tp[0].time_cost}}</td>
+    </tr>
+    <tr>
+        <td bgcolor="#C0C0C0" align="left">Price(USD):</td>
+        <td id='mmcost' bgcolor="#C0C0C0" align="center">{{ tp[0].price }}</td>
+    </tr>
+
+</tbody>
+</table>
+</div>
+
+<div id="box2" class="box span4" style='text-align:left;float:right;width:380px'>
+<div>
+<h4>Please enter a valid PayPal email. </h4>
+WARNING: Check all information before create your order. If you not correct specify status of imei, i.e. you send imei on unlock like Clean, but then when we check turns out that he Barred, when we will be return your money, amount will be on 1.50$ less. Because we pay money for check your imei is clean or blacklisted.
+<br><br><br><br><br><br><br><br>
+</div>
+<input type="submit" name="submit" value="Order it" class="more block" style="border:0;font-weight: bolder;font-size: 20px;margin-left:130px;color: #08c;cursor: pointer;background-image: url(/static/img/more.gif);white-space: nowrap;padding-right: 10px;background: url(/static/img/more.gif) no-repeat 100% 50%;text-align: right;">
+</div>
+
+</div></div>
+</form>
+
+
+</div><!-- #content -->
+</div>
+
+</div><!-- #wrapper .container-fluid -->
+</div><!-- footer wrapper -->
+<div id="footer-main-wrapper" class="container-fluid">
+<div id="footer-wrapper" class="container">
+<footer class="site-footer row-fluid" style='margin-top:0px;'>
+<div class="icons" style="float: right;display:inline-block;">Any issues please contact me: <a href="mailto:chat@csunlock.com"><img src="/static/img/email.png" alt="Email" /></a> </div>
+</footer><!-- .site-footer .row-fluid -->
+
+</div><!-- #wrapper .container-fluid -->
+
+<script type='text/javascript' src='/static/jslib/bootstrap.min.js'></script>
+
+</div><!-- footer wrapper -->
+
+</body>
+</html>
